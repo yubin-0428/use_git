@@ -1,0 +1,31 @@
+1. git config --global user.name "(내 이름)"
+2. git config -- global user.email "(내 이메일)"
+git config --list : 내 이름하고, 내 이메일이 잘 들어갔는지 확인 할 수 있는 코드
+ls : 내 폴더 안에 머가 있는지 확인하는 코드. 만약 없다면 cd ./쓰고 입력해서 폴더 설정
+
+-------------------- 이제 소스 코드를 올려볼게용 -----------------------------------------
+
+1. git init ▶ git을 쓸 준비! git init을 하면 올리려는 파일 안에 git이 생긴다!
+ - 만약 이걸 쓰고 나서도 .git이 안보인다면 보기▶옵션▶폴더 및 검색 옵션 변경으로 들어가서 폴더 창을 연다. 그리고 보기▶숨김파일, 폴더 및 드라이브 표시 체크▶확인 을 하면 .git이 보인다.
+
+2. git add ▶ 내가 어떤 파일을 깃에 올릴지 알려주겠다!
+ - 사용법 : git add (파일이름) = 파일 하나만 선택해서 올릴 수 있다.
+ - 파일이름에 .을 쓰면 모든 파일을 올려주겠단 소리다!
+git status : 상태를 알려주는 명령어 (필수는 아님)
+
+3. git commit -m "first commit" ▶ 히스토리 만들기 이며 first commit은 히스토리 이름이다.
+
+4. git remote -v ▶를 입력해서 아무것도 뜨지 않으면 자신의 repo에 들어가 링크를 복사한후
+
+5. git remote add origin (복사한 링크) ▶ 를 입력해 remote를 완료 해 준다.
+
+6. git push -u origin master ▶을 입력햇 로컬 저장소에 있는 파일을 원격으로 push해주면 끝
+
+간단한 git 명령어
+- git init : 현재 디렉터리를 Git 저장소로 변환해줍니다.
+- git add : 파일을 원격 저장소에 추가합니다. ( 예시로 test1.py를 추가하려면 git add test1.py  실제 추가가 아니라 깃의 저장소의 스냅샷에 포함된다고 생각하면 될듯 합니다.)
+- git commit : 디렉토리의 변경과 추가를 저장소에 기록합니다. ( git commit -m "New File" : 커밋 시 남길 메시지)
+- git push : 로컬 저장소의 변경사항을 github에 반영합니다. ( git push origin master )
+- git checkout : 현재 위치하고 있지 않은 저장소를 체크아웃합니다. (예를 들어 master 브랜치를 보고 싶으면, git checkout master를 사용할 수 있습니다.)
+- git merge : 브랜치에서 하던 작업을 끝내고, 동료가 볼 수 있는 master브랜치로 합치는 과정입니다.
+- git pull : 로컬 저장소 작업할 때, 작업하고 있는 저장소의 최신 버전을 받아옵니다.
